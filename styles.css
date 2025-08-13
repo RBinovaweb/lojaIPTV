@@ -1,28 +1,29 @@
-/* Fonte e reset */
-body { 
+/* ======== ESTILO GERAL ======== */
+body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(135deg, #0e0e0e, #1a1a1a);
+    background: linear-gradient(135deg, #0f0f0f, #1b1b1b);
     color: #e4e4e4;
 }
 
-/* Cabeçalho */
+/* ======== CABEÇALHO ======== */
 header {
     background: linear-gradient(90deg, #111, #222);
     color: #fff;
     padding: 20px;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2rem;
     letter-spacing: 1px;
-    box-shadow: 0px 2px 12px rgba(0,0,0,0.7);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.7);
 }
 
-/* Menu de navegação */
+/* ======== MENU ======== */
 nav {
-    background-color: #1f1f1f;
-    overflow: hidden;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
     border-bottom: 1px solid #333;
 }
 
@@ -30,37 +31,24 @@ nav a {
     color: #e4e4e4;
     padding: 14px 20px;
     text-decoration: none;
-    float: left;
     transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #292929;
     color: #00ff9d;
+    background-color: #292929;
 }
 
-/* Hero section */
-.hero {
-    background: url('https://via.placeholder.com/1200x400?text=Banner+Profissional') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 50px;
-    position: relative;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-}
-
-.hero p {
-    font-size: 1.2rem;
-    opacity: 0.85;
-}
-
-/* Sessão de produtos */
+/* ======== PRODUTOS ======== */
 .products {
-    padding: 20px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00ff9d;
 }
 
 .product-grid {
@@ -70,75 +58,144 @@ nav a:hover {
 }
 
 .product {
-    background: #1c1c1c;
+    background: #1f1f1f;
     border: 1px solid #333;
     border-radius: 8px;
     padding: 15px;
-    text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
 .product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,255,157,0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0,255,157,0.25);
 }
 
 .product img {
     max-width: 100%;
-    height: auto;
     border-radius: 5px;
 }
 
-/* Botão WhatsApp */
+.product-info h3 {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.product-info p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Botões */
+.product button {
+    background: linear-gradient(90deg, #28a745, #218838);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.product button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(40,167,69,0.6);
+}
+
+/* WhatsApp */
 .whatsapp-btn {
-    margin-top: 10px;
+    display: inline-block;
+    margin-top: 8px;
     background: linear-gradient(90deg, #25D366, #1ebc57);
     color: white;
-    padding: 10px 15px;
+    padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
-    display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .whatsapp-btn:hover {
-    transform: scale(1.05);
     box-shadow: 0 0 15px rgba(37,211,102,0.6);
 }
 
-/* Checkout */
-.checkout {
-    padding: 20px;
-}
-
-/* Rodapé */
-footer {
-    background: #111;
-    color: #aaa;
-    padding: 20px;
+/* ======== LISTA DE DISPOSITIVOS ======== */
+.devices {
+    padding: 30px 20px;
+    background: #151515;
     text-align: center;
     border-top: 1px solid #333;
 }
 
-/* Botão do carrinho fixo */
-.cart-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+.devices h2 {
+    color: #00ff9d;
 }
 
-.cart-btn a {
-    background: linear-gradient(90deg, #28a745, #218838);
+.devices ul {
+    list-style: none;
+    padding: 0;
+}
+
+.devices li {
+    margin: 5px 0;
+}
+
+/* ======== FORMULÁRIOS ======== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    color: #ccc;
+}
+
+form input, 
+form select, 
+form textarea {
+    padding: 8px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+}
+
+form button {
+    background: linear-gradient(90deg, #00ff9d, #00cc7a);
     color: white;
-    padding: 12px 18px;
-    border-radius: 30px;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(40,167,69,0.4);
-    transition: all 0.3s ease;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.cart-btn a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(40,167,69,0.6);
+form button:hover {
+    box-shadow: 0 0 15px rgba(0,255,157,0.5);
+}
+
+/* ======== FEEDBACK ======== */
+.feedback-section {
+    padding: 30px 20px;
+    background: #101010;
+    text-align: center;
+}
+
+.feedback-item {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
 }
